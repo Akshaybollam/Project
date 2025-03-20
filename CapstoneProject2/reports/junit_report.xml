@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="317.617" tests="15" skipped="0" failures="0" errors="0">
+<testcase classname="User Registration and Login" name="Register a new user - #1.1" time="34.437">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+And User enters a new "John" and "john4006@gmail.com" address...............passed
+And User clicks on Signup button............................................passed
+Then User should see ENTER ACCOUNT INFORMATION form.........................passed
+And User enters account details.............................................passed
+And User enters personal details and address information....................passed
+And User clicks on Create Account button....................................passed
+Then User should see "Account Created!" message.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Register a new user - #1.2" time="15.788">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+And User enters a new "Emily" and "emily78@gmail.com" address...............passed
+And User clicks on Signup button............................................passed
+Then User should see ENTER ACCOUNT INFORMATION form.........................passed
+And User enters account details.............................................passed
+And User enters personal details and address information....................passed
+And User clicks on Create Account button....................................passed
+Then User should see "Account Created!" message.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Login with valid credentials - #1.1" time="31.241">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+Then User should see "Login to your account"................................passed
+And User enters valid "testuser23@test.com" and "Akshay2001@"...............passed
+Then User clicks on Login button............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Login User with incorrect credentials - #1.1" time="20.508">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+And User enters invalid "wronguser@test.com" and "Wrong123".................passed
+And User clicks on Login button.............................................passed
+Then User should see "Invalid login credentials" error message..............passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Verify user is able to log in and log out successfully - #1.1" time="13.359">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+Then I should see Login to your account.....................................passed
+When I enter valid email "testuser23@test.com" and password "Akshay2001@"...passed
+And I click on the Login button.............................................passed
+Then I should see Logged in as "Testuser"...................................passed
+When I click on the Logout button...........................................passed
+Then I should be navigated back to the login page...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Verify user cannot register with an already registered email - #1.1" time="30.617">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+Then User should see New User Signup! text..................................passed
+When User enters name "Akshay" and already registered email "bollamakshay756@gmail.com".passed
+And User clicks on the Signup button........................................passed
+Then User should see an error message "Email Address already exist!"........passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User submits the contact form successfully" time="10.464">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When I navigate to the Contact Us page......................................passed
+Then I should see the GET IN TOUCH heading..................................passed
+When I fill in the contact form with details................................passed
+And I upload a file.........................................................passed
+And I click the Submit button and accept the alert..........................passed
+Then I should see the success message Success! Your details have been submitted successfully..passed
+When I click the Home button................................................passed
+Then I should be redirected to the home page................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User navigates to the Test Cases page successfully" time="6.936">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When I click on the Test Cases button.......................................passed
+Then I should be redirected to the Test Cases page..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User successfully subscribes using different emails - #1.1" time="16.423">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When I scroll down to the Subscription section..............................passed
+And I enter my email "user1@test.com" and click subscribe...................passed
+Then I should see the success message You have been successfully subscribed!.passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User adds a recommended item to the cart and verifies it" time="8.914">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User scrolls to the bottom of the page.................................passed
+Then User should see the RECOMMENDED ITEMS section..........................passed
+When User clicks Add To Cart on a recommended product.......................passed
+And User clicks View Cart button............................................passed
+Then The product should be displayed in the cart............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User verifies scroll up and scroll down on home page" time="6.059">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+Then I should see the home page.............................................passed
+When I scroll down to the bottom of the page................................passed
+Then I should see Subscription text.........................................passed
+When I click on the button arrow button.....................................passed
+Then I should see expectedText on screen....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User verifies scroll up and scroll down without using arrow button" time="26.298">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+Then I  see the home page...................................................passed
+When I scroll  to the bottom of the page....................................passed
+Then I should see section Subscription......................................passed
+When I scroll u to the top of the page......................................passed
+Then I should see expectedText..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Verify product removal from cart" time="10.234">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+And I click on View Product.................................................passed
+When I add a product to the cart............................................passed
+And click continue shopping.................................................passed
+And I navigate to the cart page.............................................passed
+Then I should see the cart page displayed...................................passed
+When I remove a product from the cart.......................................passed
+Then I should see the product is removed....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Verify category navigation for Women and Men products" time="10.782">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+Then I should see categories on the left sidebar............................passed
+When I click on the Women category..........................................passed
+And I click on the Dress sub-category under Women...........................passed
+Then I should see the WOMEN - DRESS PRODUCTS page...........................passed
+When I click on the Men category............................................passed
+And I click on the Jeans sub-category under Men.............................passed
+Then I should see the MEN - JEANS PRODUCTS page.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Register and complete checkout process" time="74.227">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+When I enter signup details with name "John Doenc" and email "johndoe4098@example.com".passed
+And I enter account details with password "password123", day "10", month "January", year "1990".passed
+And I enter address details "John", "Doe", "Company", "123 Street", "Apt 4B", "United States", "California", "Los Angeles", "90001", "1234567890".passed
+Then I should see account created message...................................passed
+When I click Continue.......................................................passed
+Then I should be logged in as a user........................................passed
+When I add products to cart and go to cart page.............................passed
+And I proceed with checkout.................................................passed
+Then I should see address and order review details..........................passed
+When I enter comment "Please deliver soon" and place the order..............passed
+And I enter the payment details "John Doe", "4111111111111111", "123", "12", "2025".passed
+And I confirm  order........................................................passed
+Then I should see success message...........................................passed
+When I delete the account...................................................passed
+Then I should see account deleted message...................................passed
+]]></system-out>
+</testcase>
+</testsuite>
